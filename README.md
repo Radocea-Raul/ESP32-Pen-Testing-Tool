@@ -1,5 +1,7 @@
 #  Cypher Box - 2.4GHz ESP32 Jammer Tool
 
+![Cypher Box Asamblat](proiect_asamblat.jpg)
+
 ⚠️ **DISCLAIMER:** Acest proiect a fost creat STRICT în scopuri educaționale și pentru testarea securității rețelelor (penetration testing) în medii controlate, cu autorizație. Utilizarea dispozitivelor de bruiaj (jammers) în spații publice sau asupra echipamentelor care nu îți aparțin este ilegală în majoritatea țărilor. Autorul nu își asumă responsabilitatea pentru utilizarea abuzivă a acestui cod.
 
 ##  Descriere
