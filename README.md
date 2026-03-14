@@ -1,7 +1,7 @@
 #  ESP32_Jammer - 2.4GHz ESP32 Jammer Tool
 
-![Jammer Asamblat](proiect_asamblat.jpg)
-![PCB](PCB.JPG)
+![Jammer Asamblat](poze/proiect_asamblat.jpg)
+![PCB](poze/PCB.JPG)
 
 ⚠️ **DISCLAIMER:** Acest proiect a fost creat STRICT în scopuri educaționale și pentru testarea securității rețelelor (penetration testing) în medii controlate, cu autorizație. Utilizarea dispozitivelor de bruiaj (jammers) în spații publice sau asupra echipamentelor care nu îți aparțin este ilegală în majoritatea țărilor. Autorul nu își asumă responsabilitatea pentru utilizarea abuzivă a acestui cod.
 
@@ -78,10 +78,10 @@ Toate cele 3 module se leagă în paralel la pinii VSPI ai ESP32-ului:
 
 Înainte de a ajunge la varianta finală și curată de pe PCB, "Cypher Box" a început ca un prototip pe breadboard. A fost un "spaghetti de fire" la început pentru a testa comunicarea SPI simultană cu cele 3 module NRF24L01 și alimentarea din AMS1117, dar a meritat efortul!
 
-![Prototip Breadboard 1](poza_breadboard1.jpg)
+![Prototip Breadboard 1](poze/poza_breadboard1.jpg)
 *(Faza de testare pe breadboard)*
 
-![Prototip Breadboard 2](poza_breadboard2.jpg)
+![Prototip Breadboard 2](poze/poza_breadboard2.jpg)
 *(Primele teste cu ecranul OLED)*
 
 ##  Sursa Originală
