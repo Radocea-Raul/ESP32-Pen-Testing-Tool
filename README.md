@@ -38,6 +38,37 @@ Pentru a compila acest cod, vei avea nevoie de următoarele librării instalate 
 5. Apasă *Upload*.
 6. [cite_start]Odată pornit, vei vedea logo-ul de boot ("demonSHIT" / Cypher Box) [cite: 67, 74][cite_start], urmat de un mesaj de întâmpinare [cite: 76][cite_start], iar apoi vei intra în meniul principal[cite: 94]. Folosește butoanele pentru a naviga.
 
+## Schema de Conectare (Pinout)
+
+**Alimentare (Foarte Important):**
+Modulele NRF24L01 consumă mult curent. Tensiunea de 3.3V a ESP32-ului nu este suficientă pentru 3 module simultan. 
+* Folosește pinul `VIN` (5V) al ESP32 pentru a alimenta regulatorul **AMS1117**.
+* Ieșirea de 3.3V a regulatorului AMS1117 va alimenta cele 3 module radio.
+* Pune condensatoarele de **47µF** (sau 20µF) pe intrarea/ieșirea regulatorului.
+* Lipește câte un condensator de **10µF** direct pe pinii de VCC/GND ai fiecărui modul NRF24.
+
+**Conexiuni SPI (Comune pentru toate cele 3 module NRF24):**
+Toate cele 3 module se leagă în paralel la pinii VSPI ai ESP32-ului:
+* **MOSI** -> Pin 23
+* **MISO** -> Pin 19
+* **SCK** -> Pin 18
+
+**Conexiuni Specifice CE / CSN (Pentru a le controla separat):**
+| Modul | Pin CE | Pin CSN |
+|-------|--------|---------|
+| Radio 1 | Pin 27 | Pin 15 |
+| Radio 2 | Pin 26 | Pin 25 |
+| Radio 3 | Pin 17 | Pin 5 |
+
+**Display OLED & Butoane:**
+| Componentă | Pin ESP32 |
+|------------|-----------|
+| OLED SDA | Pin 21 (Default I2C) |
+| OLED SCL | Pin 22 (Default I2C) |
+| Buton UP | Pin 14 (Conectat la GND) |
+| Buton DOWN | Pin 12 (Conectat la GND) |
+| Buton SELECT| Pin 13 (Conectat la GND) |
+
 ##  Sursa Originală
 Acest proiect a fost dezvoltat pornind de la codul original creat de [Divine Zeal](https://github.com/dkyazzentwatwa). Îi mulțumesc pentru sursa de inspirație și logica din spate!
 
