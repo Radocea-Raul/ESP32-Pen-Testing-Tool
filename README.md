@@ -70,6 +70,20 @@ Toate cele 3 module se leagă în paralel la pinii VSPI ai ESP32-ului:
 | Buton DOWN | Pin 12 (Conectat la GND) |
 | Buton SELECT| Pin 13 (Conectat la GND) |
 
+⚠️ **Notă importantă despre compatibilitate (Erori de compilare):** Dacă întâmpini erori atunci când încerci să compilezi codul, problema este cel mai probabil cauzată de versiunile noi ale pachetului ESP32 sau ale librăriilor. 
+* Este recomandat să faci **downgrade** la pachetul de plăci **esp32 by Espressif Systems** din *Boards Manager* (de preferat la o versiune stabilă din seria `2.0.x`, cum ar fi `2.0.14` sau `2.0.17`, deoarece versiunile `3.x` aduc schimbări majore care pot rupe compatibilitatea).
+* De asemenea, dacă folosești cele mai noi versiuni ale librăriilor (în special `RF24` sau `Adafruit_GFX`), și acestea pot necesita un downgrade la o versiune anterioară dacă erorile persistă.
+
+## Evoluția Proiectului (Behind the Scenes)
+
+Înainte de a ajunge la varianta finală și curată de pe PCB, "Cypher Box" a început ca un prototip pe breadboard. A fost un "spaghetti de fire" la început pentru a testa comunicarea SPI simultană cu cele 3 module NRF24L01 și alimentarea din AMS1117, dar a meritat efortul!
+
+![Prototip Breadboard 1](poza_breadboard1.jpg)
+*(Faza de testare pe breadboard)*
+
+![Prototip Breadboard 2](poza_breadboard2.jpg)
+*(Primele teste cu ecranul OLED)*
+
 ##  Sursa Originală
 Acest proiect a fost dezvoltat pornind de la codul original creat de [Divine Zeal](https://github.com/dkyazzentwatwa). Îi mulțumesc pentru sursa de inspirație și logica din spate!
 
