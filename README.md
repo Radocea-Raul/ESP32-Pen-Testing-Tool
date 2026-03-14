@@ -1,5 +1,7 @@
 #  ESP32_Jammer - 2.4GHz ESP32 Jammer Tool
 
+🌍 *[Read this documentation in English](README_en.md)*
+
 ![Jammer Asamblat](poze/proiect_asamblat.jpg)
 ![PCB](poze/PCB.JPG)
 
