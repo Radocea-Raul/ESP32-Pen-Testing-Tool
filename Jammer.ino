@@ -450,8 +450,8 @@ void setup() {
   delay(10);
   
   // -------------------------------------------------------------
-  // MODIFICAREA CRITICA ESTE AICI:
-  Wire.begin(21, 22); // <-- Asta trezeste ecranul!
+  
+  Wire.begin(21, 22); 
   // -------------------------------------------------------------
 
   initDisplay();
@@ -467,7 +467,6 @@ void setup() {
   Serial.println("buttons init'd");
 
   // Initialize U8g2_for_Adafruit_GFX
-  // MUTAT AICI INAINTE SA CHEMI demonSHIT
   u8g2_for_adafruit_gfx.begin(display); 
 
   // Display splash screens
